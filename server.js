@@ -3,13 +3,6 @@ var morgan = require('morgan');
 var path = require('path');
 var Pool = require('pg').Pool;
 var crypto = require('crytpo');
-var config={
-    user:'raghav582',
-    host:'db.imad.hasura-app.io',
-    database:'raghav582',
-    password:process.emv.DB_PASSWORD,
-
-};
 
 function hash(input,salt){
     
