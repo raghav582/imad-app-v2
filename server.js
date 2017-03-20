@@ -4,6 +4,9 @@ var path = require('path');
 var Pool = require('pg').Pool;
 var crypto = require('crytpo');
 
+var app = express();
+app.use(morgan('combined'));
+
 function hash(input,salt){
     
     var hashed=crypto.pbkdf2Sync(input, salt, 100000, 512, 'sha512');
